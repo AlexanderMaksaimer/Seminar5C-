@@ -19,11 +19,12 @@ int [] InitArray(int length) //значимый тип
 
 int [] MultipleNegative (int [] array) //ссылочный тип
 {
+    int [] newArray = new int [array.Length];
     for(int i = 0; i < array.Length; i++)
     {
-        array [i] = array[i] * -1;
+        newArray [i] = array[i] * -1;
     }
-    return array;
+    return newArray;
 }
 
 //метод, который печатает наш массив на консоль
@@ -44,4 +45,5 @@ Console.WriteLine();
 int[] array = MultipleNegative(arr);
 
 Console.WriteLine("Полученный массив: ");
+
 PrintArray(array);
